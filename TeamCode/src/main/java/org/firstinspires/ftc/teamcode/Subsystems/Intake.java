@@ -12,8 +12,8 @@ public class Intake {
         shooterMotor = hardwareMap.get(DcMotor.class, "shooterMotor");
 
         // Set default directions if needed
-        intakeMotor.setDirection(DcMotor.Direction.FORWARD);
-        shooterMotor.setDirection(DcMotor.Direction.FORWARD);
+        intakeMotor.setDirection(DcMotor.Direction.REVERSE);
+        shooterMotor.setDirection(DcMotor.Direction.REVERSE);
     }
 
     public void setIntakePower(double power) {

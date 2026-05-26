@@ -39,9 +39,8 @@ public class Basic_Linear_OpMode extends LinearOpMode {
 
             // --- Intake and Shooter control ---
             // Use gamepad buttons to control the intake subsystem.
-            // Power -1.0 is used here as per your previous preference.
-            intake.setIntakePower(gamepad1.a ? -1.0 : 0.0);
-            intake.setShooterPower(gamepad1.x ? -1.0 : 0.0);
+            intake.setIntakePower(gamepad1.a ? 1.0 : 0.0);
+            intake.setShooterPower(gamepad1.x ? 1.0 : 0.0);
 
             // --- Telemetry ---
             telemetry.addData("Status", "Run Time: " + runtime);
