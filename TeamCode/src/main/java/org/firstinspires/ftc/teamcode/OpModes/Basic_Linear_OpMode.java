@@ -32,8 +32,8 @@ public class Basic_Linear_OpMode extends LinearOpMode {
 
             drive.drive(axial, lateral, yaw);
 
-            intake.setIntakePower(gamepad1.a ? -1.0 : 0.0);
-            intake.setShooterPower(gamepad1.x ? -1.0 : 0.0);
+            intake.setIntakePower(gamepad1.a ? -0.7 : 0.0);
+            intake.setShooterPower(gamepad1.x ? -0.7 : 0.0);
 
             telemetry.addData("Status", "Run Time: " + runtime);
             telemetry.addData("Drive Motors", "FL:%.2f FR:%.2f BL:%.2f BR:%.2f",

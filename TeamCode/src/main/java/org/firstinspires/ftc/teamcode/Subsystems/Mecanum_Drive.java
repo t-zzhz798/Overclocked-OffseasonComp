@@ -12,10 +12,10 @@ public class Mecanum_Drive {
     private final DcMotor backRightDrive;
 
     public Mecanum_Drive(HardwareMap hardwareMap) {
-        frontLeftDrive  = hardwareMap.get(DcMotor.class, "front_left_drive");
-        backLeftDrive   = hardwareMap.get(DcMotor.class, "back_left_drive");
-        frontRightDrive = hardwareMap.get(DcMotor.class, "front_right_drive");
-        backRightDrive  = hardwareMap.get(DcMotor.class, "back_right_drive");
+        frontLeftDrive  = hardwareMap.get(DcMotor.class, "front_left_drive"); //1
+        backLeftDrive   = hardwareMap.get(DcMotor.class, "back_left_drive"); //2
+        frontRightDrive = hardwareMap.get(DcMotor.class, "front_right_drive"); //0
+        backRightDrive  = hardwareMap.get(DcMotor.class, "back_right_drive"); //3
 
         frontLeftDrive.setDirection(DcMotor.Direction.FORWARD);
         backLeftDrive.setDirection(DcMotor.Direction.FORWARD);
@@ -47,9 +47,6 @@ public class Mecanum_Drive {
     public void stop() {
         drive(0, 0, 0);
     }
-
-    // ── Accessors (useful for telemetry in the OpMode) ────────────────────────
-
     public double getFrontLeftPower()  { return frontLeftDrive.getPower();  }
     public double getFrontRightPower() { return frontRightDrive.getPower(); }
     public double getBackLeftPower()   { return backLeftDrive.getPower();   }

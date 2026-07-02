@@ -7,21 +7,17 @@ public class Intake {
     private final DcMotor intakeMotor;
     private final DcMotor shooterMotor;
     public Intake(HardwareMap hardwareMap) {
-        intakeMotor = hardwareMap.get(DcMotor.class, "intakeMotor");
-        shooterMotor = hardwareMap.get(DcMotor.class, "shooterMotor");
-
-        // Set default directions if needed
-        intakeMotor.setDirection(DcMotor.Direction.REVERSE);
-        shooterMotor.setDirection(DcMotor.Direction.REVERSE);
+        intakeMotor = hardwareMap.get(DcMotor.class, "intakeMotor"); //0
+        shooterMotor = hardwareMap.get(DcMotor.class, "shooterMotor"); //1
+        intakeMotor.setDirection(DcMotor.Direction.FORWARD);
+        shooterMotor.setDirection(DcMotor.Direction.FORWARD);
     }
     public void setIntakePower(double power) {
         intakeMotor.setPower(power);
     }
-
     public void setShooterPower(double power) {
         shooterMotor.setPower(power);
     }
-
     public void stop() {
         intakeMotor.setPower(0);
         shooterMotor.setPower(0);
